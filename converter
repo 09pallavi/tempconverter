@@ -1,0 +1,40 @@
+import java.util.*;
+class tempConverter{
+  static Scanner sc = new Scanner(System.in);
+  static double FtoC(double F){
+    double C = (F - 32) * 5/9;
+    return C;
+  }
+static double CtoF(double C){
+    double F = (C * 9/5) + 32;
+    return F;
+  }
+static double input(String word){
+    System.out.println("Enter "+word+" scale:");
+    double sca = sc.nextDouble();
+    return sca;
+  }
+ static void output(double sca, String word){
+    System.out.printf("%s value: %.2f",word,sca);
+  }
+ public static void main(String args[]){
+    System.out.println("1.Fahrenheit to Celcius \n2.Celcius to Fahrenheit\n3.Exit");
+while(true)
+{
+  System.out.println("\nEnter Choice: ");
+      int ch = sc.nextInt();
+      double num = 0;
+      switch(ch){
+        case 1: num = input("Fahrenheit");
+            output(FtoC(num), "Celcius");
+            break;
+        case 2: num = input("Celcius");
+            output(CtoF(num), "Fahrenheit");
+            break;
+ case 3: System.exit(0);
+            break;
+        default: System.out.println("Invalid Input");
+      }
+    }
+  }
+}
