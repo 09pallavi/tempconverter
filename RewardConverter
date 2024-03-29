@@ -1,0 +1,22 @@
+public static RewardConverter{
+   private double cashValue;
+   private int milesValue;
+public RewardConverter(double cashValue)
+{
+   this.cashValue=cashValue;
+   this.milesValue=cashValue/0.0035;
+}
+public RewardConverter(int milesValue)
+{
+  this.milesValue=milesValue;
+  this.milesValue=cashValue*0.0035;
+}
+public double getcashValue()
+{
+   return cashValue;
+}
+public double getmilesValue()
+{
+    return milesValue;
+}
+}
